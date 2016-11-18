@@ -1,0 +1,17 @@
+author:丁國騰(Kuo Teng, Ding)
+student_id:E94036209
+class:資工三乙
+description:
+    swap_string:
+        一開始我以for迴圈從oringin_string的特定位置開始走訪該字串, 並逐一複製對應字元元素給new_string
+        再利用strncat串接origin_string開頭特定長度的字串部份於new_string之後
+    calc_show:
+        我逐一檢視輸入字串, 並依照運算子和運算元而反覆將其轉為數字格式於新的整數陣列parser中
+        並以distinguish儲存parser對應位置是運算子或是運算元
+        再來先檢視乘、除、餘數運算元的部份，將對應的運算子取出且運算後放入parser，再更新調整parser其餘位置的資料
+        最後檢視加減運算元的部份，將剩餘對應的運算子取出且運算，再累加存入cal_shu中
+    sum_tree:
+        我以一堆疊陣列stack儲存接收到的數字元素
+        若是遇到數字接著空格或右括號則代表已經來到葉節點
+        再將該數值存入stack後則逐一檢視之前儲存至stack的數值，並累加，運算完成後將stack最上層之數值pop出
+        若是遇到的為數字接著右括號則代表必須再將stack上層數值pop出一次（也就是說總共pop兩次）
